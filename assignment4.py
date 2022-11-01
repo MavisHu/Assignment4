@@ -12,6 +12,10 @@ board = [
 ]
 
 
+''' adding comments here
+the following is a function to implement the flood_fill function
+adding a docstring'''
+
 def flood_fill(input_board: List[str], old: str, new: str, x: int, y: int) -> List[str]:
     """Returns board with old values replaced with new values
     through flood filling starting from the coordinates x, y
@@ -21,7 +25,7 @@ def flood_fill(input_board: List[str], old: str, new: str, x: int, y: int) -> Li
         new (str): Value that replaces the old
         x (int): X-coordinate of the flood start point
         y (int): Y-coordinate of the flood start point
-    Returns:
+        Returns:
         List[str]: Modified board
     """
 
@@ -57,3 +61,24 @@ for a in modified_board:
 # ......#~~~~~~~~#####..
 # ....###~~~~~~~~~~~~#..
 # ....#~~~~~~~~~~~~###..
+
+
+# Simran: adding board and another test case
+board_simran = [
+    "......................",
+    "...#############......",
+    "...#...........#......",
+    "...#...........#......",
+    "...#...........#####..",
+    "....###............#..",
+    "....#............###..",
+    "....##############....",
+]
+
+modified_board = flood_fill(input_board=board_simran, old=".", new="S", x=4, y=11)
+print("\n")
+
+for a in modified_board:
+    print(a)
+
+
